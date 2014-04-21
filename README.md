@@ -29,3 +29,18 @@ see `log` directory:
     -rw-r--r-- 1 hoshi hoshi 1.1K Apr 21 21:16 server.log.4
 
 Log-file size will increase in parallel after the first log rotation.
+
+    $ cat log/server.log.0
+    I, [2014-04-21T21:17:12.660271 #27213]  INFO -- : this is worker_id:2
+    I, [2014-04-21T21:17:12.761174 #27213]  INFO -- : this is worker_id:2
+
+    $ cat log/server.log.1
+    I, [2014-04-21T21:17:12.559799 #27210]  INFO -- : this is worker_id:1
+    I, [2014-04-21T21:17:12.660725 #27210]  INFO -- : this is worker_id:1
+    I, [2014-04-21T21:17:12.761091 #27210]  INFO -- : this is worker_id:1
+
+    $ cat log/server.log.2
+    I, [2014-04-21T21:17:12.548074 #27206]  INFO -- : this is worker_id:0
+    I, [2014-04-21T21:17:12.649161 #27206]  INFO -- : this is worker_id:0
+    I, [2014-04-21T21:17:12.749521 #27206]  INFO -- : this is worker_id:0
+    I, [2014-04-21T21:17:12.849869 #27206]  INFO -- : this is worker_id:0
