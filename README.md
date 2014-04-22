@@ -1,6 +1,8 @@
 DaemonLogger Test
 =================
 
+use serverengine v1.5.7 before https://github.com/frsyuki/serverengine/commit/20500ca7ec5f0cbeae5ca83bf2df6641e531e1c8
+
 execute:
 
     $ cd /path/to/daemon_logger_test
